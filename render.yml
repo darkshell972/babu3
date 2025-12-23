@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: flask-card-api
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: gunicorn b3:app --bind 0.0.0.0:$PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11
